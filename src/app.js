@@ -1,14 +1,9 @@
-var vec = [];
-var cadena = "abca";
-var cadenas = "xyzbac";
-var cont = 0;
-for (var index = 0; index < cadenas.length; index++)
-    vec[index] = cadenas.charAt(index);
-for (var index = 0; index < cadenas.length; index++)
-    for (var j = 0; j < vec.length; j++)
-        if (cadena.charAt(index) == vec[j] && vec[j] != '') {
-            cont++;
-            vec[j] = "";
-            j = vec.length - 1;
-        }
-console.log(cont);
+function ValidateIPaddress(inputText) {
+    var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+    if (inputText.value.match(ipformat))
+        return true;
+    else
+        return false;
+}
+var ip = "192.168.1.1";
+ValidateIPaddress(ip);

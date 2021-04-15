@@ -1,15 +1,10 @@
-var vec : Array<string> = [];
-var cadena= "abca";
-var cadenas = "xyzbac";
-let cont = 0;
-for(let index=0 ; index<cadenas.length ; index++)
-    vec[index]=cadenas.charAt(index);    
-for(let index=0 ; index<cadenas.length ; index++)
-    for(let j=0 ; j<vec.length ; j++)
-        if(cadena.charAt(index)==vec[j] && vec[j]!='')
-        {
-            cont++;
-            vec[j]="";
-            j=vec.length-1;
-        }
-console.log(cont);
+function ValidateIPaddress(inputText:any)
+ {
+ var ipformat = /^(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$/;
+ if(inputText.value.match(ipformat))
+ return true;
+ else
+ return false;
+ }
+let ip:any="192.168.1.1";
+ValidateIPaddress(ip);
