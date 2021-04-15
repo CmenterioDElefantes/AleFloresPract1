@@ -1,8 +1,15 @@
-let array:number[]=[1,0,1,0,1000]; ////[-1,-2]  ///[3,6,-2,-5,7,3];
-let n:number;
-let aux:number=0;
-for(n=0;n<array.length;n++){
- if (array[n]*array[n+1]>aux)
-        aux=array[n]*array[n+1];
-}
-console.log(aux);
+var vec : Array<string> = [];
+var cadena= "abca";
+var cadenas = "xyzbac";
+let cont = 0;
+for(let index=0 ; index<cadenas.length ; index++)
+    vec[index]=cadenas.charAt(index);    
+for(let index=0 ; index<cadenas.length ; index++)
+    for(let j=0 ; j<vec.length ; j++)
+        if(cadena.charAt(index)==vec[j] && vec[j]!='')
+        {
+            cont++;
+            vec[j]="";
+            j=vec.length-1;
+        }
+console.log(cont);
