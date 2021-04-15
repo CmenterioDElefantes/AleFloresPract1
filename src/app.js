@@ -1,2 +1,5 @@
-var cadena = "bang";
-console.log(cadena.split('').reverse().join(''));
+var cadena = "bangnab";
+if (cadena == (cadena.split('').reverse().join('')))
+    console.log(true);
+else
+    console.log(false);

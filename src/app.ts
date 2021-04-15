@@ -1,2 +1,4 @@
-let cadena="bang";
-console.log(cadena.split('').reverse().join(''));
+let cadena="bangnab";
+if(cadena==(cadena.split('').reverse().join(''))
+console.log(true);
+else console.log(false);
